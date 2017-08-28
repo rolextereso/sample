@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <title>wikiHow Style Popup</title>
+        <style>
+            .popup-cover
+            {
+                right: -250px;
+                bottom: -250px;
+                position: fixed;
+                margin-left: -10px;
+                width: 250px;
+                -webkit-transition: all 1s;
+                -moz-transition: all 1s;
+                -o-transition: all 1s;
+                transition: all 1s;
+            }
+           
+            .popup
+            {
+                background-color: white;
+                border: 5px solid #93b874;
+                border-right: none;
+                border-bottom: none;
+                border-radius: 150px 150px 0px 150px;
+                height: 160px;
+                margin-bottom: 0px;
+                padding: 40px;
+                text-align: center;
+                clear: both;
+            }
+           
+            .popup .close
+            {
+                font-size: 14px;
+                position: relative;
+                float: right;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="popup-cover" class="popup-cover">
+            <div class="popup">
+                <a class="close" href="javascript:popup_close();">&#10006;</a>
+                <h3>QNimate</h3>
+            </div>
+        </div>
+		<div style="height:4000px;">
+		dsfsfsf
+		</div>
+       
+        <script>
+            window.addEventListener("scroll", function(){
+                var heightOfWindow = window.innerHeight;
+                var contentScrolled = window.pageYOffset;
+                var bodyHeight = window.document.getElementsByTagName("body")[0].offsetHeight;
+                var total = bodyHeight - heightOfWindow;
+                var got = contentScrolled;
+                var scrolled = parseInt((got/total) * 100);
+               
+                if(scrolled > 85)
+                {
+                    document.getElementById("popup-cover").style.right = "0px";
+                    document.getElementById("popup-cover").style.bottom = "-10px";
+                }
+                else
+                {
+                    document.getElementById("popup-cover").style.right = "-250px";
+                    document.getElementById("popup-cover").style.bottom = "-250px";
+                }
+            }, false);
+
+            function popup_close()
+            {
+                document.getElementById("popup-cover").style.right = "-250px";
+                document.getElementById("popup-cover").style.bottom = "-250px";
+                setTimeout(function(){document.getElementById("popup-cover").style.display = "none";}, 1000);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <title>Color Changing</title>
+    <style type="text/css">
+        #percentage
+        {
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div id="percentage"></div>
+    <div style="height: 4000px;"></div>
+</body>
+<script type="text/javascript">
+    window.onscroll = function(){
+        var heightOfWindow = window.innerHeight;
+        var contentScrolled = window.pageYOffset;
+        var bodyHeight = window.document.getElementsByTagName("body")[0].offsetHeight;
+        if(bodyHeight - contentScrolled <= heightOfWindow)
+       {
+           window.document.getElementById("percentage").innerHTML = "100%";
+       }
+       else
+       {
+           var total = bodyHeight - heightOfWindow;
+           var got = contentScrolled;
+           window.document.getElementById("percentage").innerHTML = parseInt((got/total) * 100);
+       }
+   }
+</script>
+<a href="http://qnimate.com/creating-a-percentage-scrolled-indicator/">Tutorial Site</a>
+</html>
