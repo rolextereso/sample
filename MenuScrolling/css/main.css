@@ -1,0 +1,359 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body{
+    margin-top:66px; /* this is for the space consumed by the navigation */
+    background-color: #000;
+    color: #fff;
+}
+
+.container{
+    width: 1066px;
+    margin: auto;
+}
+
+/* for navigation */
+.navigation{
+    background-color:#fff;
+    font-weight: 400;
+    display: block;
+    position: fixed;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    z-index:4;
+    -webkit-box-shadow: 0px 3px 30px -11px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 3px 30px -11px rgba(0,0,0,0.4);
+    box-shadow: 0px 3px 30px -11px rgba(0,0,0,0.4);
+}
+.nav ul {
+    margin: 0;
+    padding-left: 0;
+}
+.nav li {
+    margin-left: 15px;
+}
+.nav a:link, .nav a:visited {
+    color: #586168;
+    font-size:14px;
+    text-decoration: none;
+    transition: ease-in-out .1s;
+}
+.nav a:hover, .nav .active{
+    color:#ff4545!important;
+}
+.nav {
+    padding-top: 15px;
+}
+.nav-holder ul, .nav-holder li {
+    display: inline;
+}
+.nav-holder, .header-top {
+    text-align: right;
+}
+.logo {
+  float: left;
+  width:250px;
+  padding:5px;
+  position: relative;
+  z-index: 1;
+}
+.progress-loader {
+    border: 1px solid #bf0707;
+    float: right;
+    height: 5px;
+    margin-top: 5px;
+    width: 349px;
+}
+.loaded {
+    background-color: #bf0707;
+    height: 100%;
+    width: 0%;
+}
+
+
+
+/* ==========================================================================
+   Custom Helper Classes
+   ========================================================================== */
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: auto;
+}
+
+.b{
+    font-weight:bold;
+}
+
+.norm{
+    font-weight:normal;
+}
+
+.i{
+    font-style:italic;
+}
+
+.small{
+    font-size:85%;
+}
+
+.no-margin{
+    margin:0;
+}
+
+.row::before, .row::after {
+  content: " ";
+  display: table;
+}
+
+.row::after {
+  clear: both;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    float: left;
+    min-height: 1px;
+    position:relative;
+}
+.col-12 {
+    width: 100%;
+}
+.col-11 {
+    width: 91.6667%;
+}
+.col-10 {
+    width: 83.3333%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-8 {
+    width: 66.6667%;
+}
+.col-7 {
+    width: 58.3333%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-5 {
+    width: 41.6667%;
+}
+.col-4 {
+    width: 33.3333%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-2 {
+    width: 16.6667%;
+}
+.col-1 {
+    width: 8.33333%;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
